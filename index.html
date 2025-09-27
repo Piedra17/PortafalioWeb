@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kendall Piedra | Desarrollador Web</title>
-
+    <!-- link de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...tu-integridad..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- estilos de css  -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo"><img src="logo/logo-web.png" alt="logo tipo de marca de Kendall Piedra"></div>
+    <header class="liquid-glass">
+        <div class="logo"><img src="logo/prueba-logo.png" alt="logo tipo de marca de Kendall Piedra"></div>
 
-        <nav>
+        <nav class="nav-menu" id="nav-menu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre Mi</a></li>
@@ -21,6 +22,12 @@
                 <li><a href="#">Contáctame</a></li>
             </ul>
         </nav>
+
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+        </div>
+
     </header>
 
     <section class="hero">
@@ -37,6 +44,70 @@
             </div>
         </article>
     </section>
+
+
+    <section class="proyectos">
+        <div class="parallax-bg"></div>
+        <div class="contenido">
+            <h2 class="titulo">Proyectos</h2>
+            <div class="grid">
+            <div class="cuadro izquierda">
+                <img src="imagenes/imagen-proyectos.png" alt="Proyecto 1">
+                <div class="texto">
+                <h3>De La Colina</h3>
+                <small>Un Sitio Web Responsive de Toures en Copey</small>
+                <a href="https://de-la-colina.vercel.app/" class="boton-proyectos">Ver Proyecto</a>
+                </div>
+            </div>
+            <div class="cuadro izquierda">
+                <img src="imagenes/PROYECTO-QUETZAL.png" alt="Proyecto 2">
+                <div class="texto">
+                <h3>Queztal Challenge</h3>
+                <small>Un Sitio Web Responsive de una carrera de ciclismo</small>
+                <a href="https://competencia-quetzales.vercel.app" class="boton-proyectos">Ver Proyecto</a>
+                </div>
+            </div>
+            <div class="cuadro derecha">
+                <img src="imagenes/fitforce.png" alt="Proyecto 3">
+                <div class="texto">
+                <h3>Fit Force</h3>
+                <small>Un Sitio Web Responsive de un Gym que es Administrable</small>
+                <a href="https://fit-force-six.vercel.app/" class="boton-proyectos">Ver Proyecto</a>
+                </div>
+            </div>
+            <div class="cuadro derecha">
+                <img src="imagenes/pokedex.png" alt="Proyecto 4">
+                <div class="texto">
+                <h3>Pokedex</h3>
+                <small>Un Sitio Web Responsive con posibilidades de Apk</small>
+                <a href="https://pokedex-proyexto.vercel.app/" class="boton-proyectos">Ver Proyecto</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: 0.3 // Ajusta el porcentaje visible para activar
+  });
+
+  document.querySelectorAll(".cuadro, .titulo").forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+
+
     
 
 

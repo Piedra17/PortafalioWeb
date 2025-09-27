@@ -20,19 +20,20 @@ body{
     overflow-x: hidden;
 }
 
+.logo img{
+  width: 50px;
+}
+
 header{
-    display: flex;
-    width: 1920px;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    gap: 928px;
-    flex-shrink: 0;
-    background: linear-gradient(to right,
-    #000,   
-    #030B1B,  
-    #000  
-    );
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  background: var(--color-negro);
+  padding: 5px 200px;
 }
 
 nav ul{
@@ -42,9 +43,28 @@ nav ul{
 
 nav a{
     color: var(--color-blaco);
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: normal;
     transition: color 0.3s;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 35px;
+  color: var(--color-blaco);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.menu-toggle.rotate {
+  transform: rotate(180deg);
+}
+
+.nav-menu {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+
 
 
 .hero {
@@ -53,10 +73,11 @@ nav a{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     padding: 4px 0;
     overflow: hidden;
+    margin-top: 0px; /* altura del header fijo */
 }
 
 .hero::before {
@@ -94,18 +115,18 @@ nav a{
 }
 
 .hero-text h1{
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
 #typing-text {
-  font-size: 2.5rem;
+  font-size: 50px;
   color: #fff;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid var(--color-rojo-intenso); /* efecto cursor */
+  border-right: 2px solid var(--color-rojo-intenso); 
   width: 0;
-  animation: typing 4s steps() forwards, blink 0.7s step-end infinite;
+  animation: typing 7s steps(100, end) infinite, blink 0.8s step-end infinite;
 }
 
 #typing-text span {
@@ -123,10 +144,176 @@ nav a{
 
 
 .hero-text p{
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
 }
 
 .hero-image img{
     width: 100%;
-    padding-top: 150px;
+    padding-top: 250px;
+    filter: brightness(0.8) contrast(1.0);
+}
+
+/* seccion cuadros */
+
+.proyectos {
+  position: relative;
+  height: auto;
+  padding: 50px 20px;
+  color: white;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+    .titulo,
+    .cuadro {
+    opacity: 0;
+    transition: all 2s ease;
+    }
+
+    /* Elimina animation: slideDown */
+    .titulo {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    text-align: center;
+    transform: translateY(-50px);
+    }
+
+    .titulo.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    .cuadro.izquierda {
+    transform: translateX(-300px);
+    }
+
+    .cuadro.derecha {
+    transform: translateX(300px);
+    }
+
+    .cuadro.visible {
+    opacity: 1;
+    transform: translateX(0);
+    }
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cuadro {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #fe003322;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+}
+
+.cuadro img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texto {
+  padding: 20px;
+  color: white;
+}
+
+.texto h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.texto small {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.boton-proyectos {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--color-rojo-intenso);
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-proyectos:hover {
+  background-color: var(--color-negro);
+  color: var(--color-rojo-intenso);
+}
+
+/* Tablets o pc pequeñas */
+@media (min-width: 769px) and (max-width: 1280px) {
+    .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: var(--color-negro);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
 }
