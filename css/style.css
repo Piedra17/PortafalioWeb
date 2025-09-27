@@ -294,15 +294,18 @@ nav a{
 
   .nav-menu {
     position: absolute;
-    top: 100px;
+    top: 90px;
     left: 0;
     width: 100%;
-    background: var(--color-negro);
-    transform: translateY(-20px);
+    padding: 0 0 50px 0;
+    background: var(--color-rojo-intenso);
+    transform: translateY(-200px);
     opacity: 0;
     pointer-events: none;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
+    transition: 1s;
   }
 
   .nav-menu.active {
@@ -315,5 +318,7 @@ nav a{
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
+    align-items: center;
+    z-index: 100;
   }
 }

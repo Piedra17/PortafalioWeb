@@ -1,4 +1,4 @@
-//menu resposive con animacion
+document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-menu');
   let isOpen = false;
@@ -10,27 +10,28 @@
     isOpen = !isOpen;
   });
 
+  const textElement = document.getElementById("typing-text");
+  if (textElement) {
+    textElement.style.width = "0";
+    textElement.style.animation = "none";
+    setTimeout(() => {
+      textElement.style.animation = "typing 4s steps(30, end) forwards, blink 0.7s step-end infinite";
+    }, 100);
+  }
 
-
-textElement.style.width = "0"; // Reinicia el ancho
-textElement.style.animation = "none";
-setTimeout(() => {
-    textElement.style.animation = "typing 4s steps(30, end) forwards, blink 0.7s step-end infinite";
-}, 100);
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    } else {
-      entry.target.classList.remove("visible");
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: 0.3
   });
-}, {
-  threshold: 0.3 // Se activa cuando el 30% del elemento es visible
-});
 
-document.querySelectorAll(".cuadro, .titulo").forEach(el => {
-  observer.observe(el);
+  document.querySelectorAll(".cuadro, .titulo").forEach(el => {
+    observer.observe(el);
+  });
 });
-
