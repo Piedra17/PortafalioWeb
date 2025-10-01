@@ -1,3 +1,5 @@
+//menu responsive con movimiento
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-menu');
@@ -10,14 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
     isOpen = !isOpen;
   });
 
-  const textElement = document.getElementById("typing-text");
-  if (textElement) {
-    textElement.style.width = "0";
-    textElement.style.animation = "none";
-    setTimeout(() => {
-      textElement.style.animation = "typing 4s steps(30, end) forwards, blink 0.7s step-end infinite";
-    }, 100);
-  }
+
+
+
+const textElement = document.getElementById("typing-text");
+
+function restartTyping() {
+  textElement.style.animation = "none";
+  textElement.offsetHeight; 
+  textElement.style.animation = "typingLoop 30s steps(60, end), blink 0.7s step-end infinite";
+}
+
+restartTyping();
+setInterval(restartTyping, 25000);
+
+
+
+//paralx para los proyectos
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -35,3 +46,4 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+
