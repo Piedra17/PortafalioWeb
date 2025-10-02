@@ -1,0 +1,22 @@
+Heading
+FIELD_DELIM	TABS
+VIDEO_FORMAT	1080
+AUDIO_FORMAT	48kHz
+FPS	29.97
+
+Column
+Name	Filepath	Tape	Start	End	Duration	Daily Roll	Labroll	Camroll	TC 24	Tracks	Soundroll	Sound TC	Scene	Take	DESCRIPT	Comments	Notes	Circled	ASC_SOP	ASC_SAT	Lut	Lut1	Lut2	ImageFileName	AudioFileName
+
+Data
+
+HD Bars and Tone		Cinta desconocida	08;06;40;11	08;06;40;11	00;00;00;00				TEMP TC24	VA1		00;00;00;00						N								
+Kendall-01-01-CAM_B.MOV	C:\Users\lab1\Downloads\Videos Proyecto - copia\Kendall-01-01-CAM_B.MOV	Cinta desconocida	00:00:00:00	00:01:21:14	00:01:21:14				TEMP TC24	VA1		00:00:00:00						N								
+Kendall-02-01-CAM_B.MOV	C:\Users\lab1\Downloads\Videos Proyecto - copia\Kendall-02-01-CAM_B.MOV	Cinta desconocida	00:00:00:00	00:01:29:09	00:01:29:09				TEMP TC24	VA1		00:00:00:00						N								
+Kendall-03-01-CAM_B.MOV	C:\Users\lab1\Downloads\Videos Proyecto - copia\Kendall-03-01-CAM_B.MOV	Cinta desconocida	00:00:00:00	00:01:43:10	00:01:43:10				TEMP TC24	VA1		00:00:00:00						N								
+Kendall-04-01-CAM_B.MOV	C:\Users\lab1\Downloads\Videos Proyecto - copia\Kendall-04-01-CAM_B.MOV	Cinta desconocida	00:00:00:00	00:00:55:07	00:00:55:07				TEMP TC24	VA1		00:00:00:00						N								
+Logo_Dummy.png	C:\Users\lab1\Downloads\Videos Proyecto - copia\Motion Graphics Template Media\883d9883-0aa9-4500-b3f0-286198ee67f7\Claqueta de película\Logo_Dummy.png	Cinta desconocida	08:00:00:11	08:00:00:11	00:00:00:00				TEMP TC24	VA1		00:00:00:00						N								
+Logo_Dummy.png	C:\Users\lab1\Downloads\Videos Proyecto - copia\Motion Graphics Template Media\a2a0177f-3ac8-402e-962f-71f86d851325\Logotipo de presentación clásico\Logo_Dummy.png	Cinta desconocida	08:00:00:11	08:00:00:11	00:00:00:00				TEMP TC24	VA1		00:00:00:00						N								
+Transición de juegos	C:\Users\lab1\Downloads\Videos Proyecto - copia\Motion Graphics Template Media\6f9b82db-beb0-4ebb-8892-3cef7a3a5ff9\Transición de juegos.aegraphic	Cinta desconocida	00:00:00:00	00:00:02:00	00:00:02:00				TEMP TC24	VA1		00:00:00:00						N								
+logo-web.png	D:\portaflio pagina web\logo\logo-web.png	Cinta desconocida	08:06:40:00	08:06:40:00	00:00:00:00				TEMP TC24	VA1		00:00:00:00						N								
+prueba-logo-video.png	D:\portaflio pagina web\logo\prueba-logo-video.png	Cinta desconocida	08:06:40:00	08:06:40:00	00:00:00:00				TEMP TC24	VA1		00:00:00:00						N								
+prueba-logo.png	D:\portaflio pagina web\logo\prueba-logo.png	Cinta desconocida	08:06:40:00	08:06:40:00	00:00:00:00				TEMP TC24	VA1		00:00:00:00						N								

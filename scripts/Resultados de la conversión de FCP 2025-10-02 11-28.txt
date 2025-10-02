@@ -1,0 +1,6 @@
+Problema de conversión:
+	Elemento sintético (HD Bars and Tone) no convertido, barra utilizada como marcador de posición.
+Problema de conversión:
+	Secuencia <Secuencia 01> en , pista de vídeo 1: Efecto <Conformar con SDR> del clip <Kendall-02-01-CAM_B.MOV> no convertido.
+Problema de conversión:
+	Secuencia <Secuencia 01> en , pista de vídeo 2: Efecto <Niveles> del clip <Gráfico> no convertido.
