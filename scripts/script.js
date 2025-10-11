@@ -1,3 +1,13 @@
+//menu con efecto glass que se active al hacer scroll
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('reduce-header');
+    } else {
+      header.classList.remove('reduce-header');
+    }
+  });
+
 //menu responsive con movimiento
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,3 +57,46 @@ setInterval(restartTyping, 25000);
   });
 });
 
+
+
+//skills
+const skills = document.querySelectorAll('.skill');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      el.classList.add('visible');
+      const percent = el.dataset.percent;
+      el.querySelector('.percent-bar span').style.width = percent + '%';
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+skills.forEach(skill => observer.observe(skill));
+
+
+function animatePercentText(el, target) {
+  let count = 0;
+  const step = Math.ceil(target / 30); // velocidad
+  const interval = setInterval(() => {
+    count += step;
+    if (count >= target) {
+      count = target;
+      clearInterval(interval);
+    }
+    el.textContent = count + '%';
+  }, 30);
+}
+
+entries.forEach(entry => {
+  if (entry.isIntersecting) {
+    const el = entry.target;
+    el.classList.add('visible');
+    const percent = parseInt(el.dataset.percent);
+    el.querySelector('.percent-bar span').style.width = percent + '%';
+    animatePercentText(el.querySelector('.percent-text'), percent);
+    observer.unobserve(el);
+  }
+});
